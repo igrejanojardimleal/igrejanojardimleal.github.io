@@ -50,9 +50,9 @@
     .link strong{font-size:18px;line-height:1.4}
     .link span{font-size:14px;line-height:1.5}
     .link{min-height:100px;padding:20px 22px;gap:7px}
-    .link.pix{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:86px;background:#e6f3eb;border:2px solid #68987b;color:#174f35}
-    .link.pix span{color:#355e46}
-    .link.pix:hover,.link.pix:focus-visible{background:#d8eddf;border-color:#2f7048}
+    .link.pix{grid-column:auto;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left;min-height:100px;background:#fff;border:1px solid var(--line);color:var(--deep)}
+    .link.pix span{color:#617169}
+    .link.pix:hover,.link.pix:focus-visible{background:#edf5ee;border-color:#85a592}
     footer{border-top:1px solid #e5ebe5;margin-top:27px;padding-top:20px;color:#697878;font-size:12px}
     @media(max-width:500px){.links{grid-template-columns:1fr}.link.primary{grid-column:auto}main{border-radius:19px}}
     @media(prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -67,10 +67,10 @@
     <p>Um espaço de fé, louvor e comunhão. Conheça nosso hinário digital, os eventos, cultos e conteúdos da igreja.</p>
     <nav class="links" aria-label="Acessos ao portal da igreja">
       <a class="link primary" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/"><strong>Entrar no site da igreja</strong><span>Portal completo da IGJAL</span></a>
-      <a class="link pix" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/contribuir.html"><strong>♡ Ofertar via Pix</strong><span>Ver a chave Pix oficial e confirmar o beneficiário</span></a>
       <a class="link" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/louvores.html"><strong>♫ Hinário Pedacinho do Céu</strong><span>Letras, cifras e Volume 2 atualizado digitalmente</span></a>
       <a class="link" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/agenda.html"><strong>▦ Agenda e eventos</strong><span>Cultos, avisos e programação da igreja</span></a>
       <a class="link" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/canal.html"><strong>▶ Canal da Igreja</strong><span>Vídeos, louvores e apresentações da comunidade</span></a>
+      <a class="link pix" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/contribuir.html"><strong>♡ Ofertar via Pix</strong><span>Ver a chave Pix oficial e confirmar o beneficiário</span></a>
     </nav>
     <footer>Igreja no Jardim Leal · Ministério Obra da Restauração</footer>
   </main>
