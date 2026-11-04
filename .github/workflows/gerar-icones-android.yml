@@ -1,0 +1,45 @@
+name: Preparar ícones Android IGJAL
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/gerar-icones-android.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  icons:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gerar imagens Android com logo oficial
+        run: |
+          python -m pip install --disable-pip-version-check Pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+          source = Image.open("logo-igreja.png").convert("RGBA")
+          out = Path("app-icons")
+          out.mkdir(parents=True, exist_ok=True)
+          for pixels, scale, name in [
+              (192, .94, "igjal-192.png"),
+              (512, .94, "igjal-512.png"),
+              (512, .56, "igjal-maskable-512.png"),
+          ]:
+              bg = Image.new("RGBA", (pixels,pixels), "#FFFFFF")
+              max_px = round(pixels * scale)
+              logo = ImageOps.contain(source, (max_px,max_px), Image.Resampling.LANCZOS)
+              bg.alpha_composite(logo, ((pixels-logo.width)//2,(pixels-logo.height)//2))
+              bg.convert("RGB").save(out / name, format="PNG", optimize=True)
+              assert Image.open(out / name).size == (pixels,pixels)
+          print("Ícones Android gerados a partir do logotipo oficial sem alterações.")
+          PY
+      - name: Publicar ícones no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app-icons/igjal-192.png app-icons/igjal-512.png app-icons/igjal-maskable-512.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Publicar ícones Android oficiais IGJAL (192, 512, maskable)"
+            git push origin HEAD:main
+          fi
