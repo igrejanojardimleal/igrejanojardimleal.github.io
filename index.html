@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="kbs1Pf2CNy22y1F2rISuaksHf2l0OLgBBOuQiHczv88">
   <meta name="theme-color" content="#123b67">
+  <meta name="igjal-layout-version" content="promessas-topo-mini-20261104-v2">
   <meta name="description" content="Igreja no Jardim Leal — Ministério Obra da Restauração. Acesse o portal da IGJAL, o Hinário Pedacinho do Céu e a agenda de eventos e cultos.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <title>Igreja no Jardim Leal | IGJAL — Obra da Restauração</title>
@@ -147,25 +148,30 @@
     main>.igjal-promises .igjal-promise-bar,main>.igjal-promises .igjal-promise-actions{justify-content:center;gap:0}
     main>.igjal-promises .igjal-promise-actions a{min-height:29px;padding:5px 12px;border:1px solid #b9d6c0;border-radius:999px;font-size:10px;font-weight:750;background:#e6f3e9;color:#2a6546}
     @media(max-width:500px){main>.igjal-promises{padding:8px 9px;margin-bottom:12px}main>.igjal-promises blockquote{font-size:12px;line-height:1.36}main>.igjal-promises .igjal-promises-intro h3{font-size:13px}main>.igjal-promises .igjal-promises-intro>p{font-size:9px}}
+
+    /* IGJAL: mensagem de entrada realmente compacta, acima do logo, sem duplicação. */
+    main>.igjal-promises-mini{display:block!important;max-width:550px!important;margin:0 auto 12px!important;padding:8px 13px!important;border:1px solid #e3ebe3!important;border-radius:11px!important;background:#f7faf6!important;box-shadow:none!important;text-align:center!important}
+    main>.igjal-promises-mini .igjal-promises-intro{margin:0!important}
+    main>.igjal-promises-mini .igjal-promises-eyebrow{font-size:9px!important;line-height:1.2!important;letter-spacing:.045em!important;color:#466b53!important}
+    main>.igjal-promises-mini blockquote{display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:2!important;line-clamp:2;overflow:hidden!important;max-width:510px!important;margin:5px auto 3px!important;padding:0!important;border:0!important;background:none!important;font-size:12px!important;line-height:1.37!important;font-weight:500!important;color:#365647!important;text-shadow:none!important;animation:none!important;text-align:center!important}
+    main>.igjal-promises-mini .igjal-promise-meta{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:4px}
+    main>.igjal-promises-mini .igjal-promise-reference{font-size:10px!important;line-height:1.2!important;margin:0!important;font-weight:750!important;color:#41654f!important}
+    main>.igjal-promises-mini #igjal-promise-whatsapp{font-size:10px;font-weight:750;color:#276c47;background:#e5f2e8;border:1px solid #d0e3d4;padding:4px 10px;border-radius:100px;min-height:27px;display:inline-flex;align-items:center;text-decoration:none}
+    main>.igjal-promises-mini #igjal-promise-whatsapp:focus-visible{outline:2px solid #276c47;outline-offset:2px}
+    @media(max-width:500px){main>.igjal-promises-mini{margin-bottom:9px!important;padding:7px 10px!important}main>.igjal-promises-mini blockquote{font-size:11px!important}main>.igjal-promises-mini .igjal-promise-meta{gap:8px}}
   </style>
 </head>
 <body>
   <main>
-    <section class="igjal-promises" aria-labelledby="igjal-promises-title">
+    <section class="igjal-promises igjal-promises-mini" aria-label="Caixinha de Promessas da IGJAL">
       <div class="igjal-promises-intro">
         <span class="igjal-promises-eyebrow">✦ CAIXINHA DE PROMESSAS · IGJAL</span>
-        <h3 id="igjal-promises-title">Uma palavra para o seu dia</h3>
-        <p>Versículos bíblicos para meditar, compartilhar e guardar no coração.</p>
       </div>
       <blockquote id="igjal-promise-text" aria-live="polite">Carregando a Palavra...</blockquote>
-      <p id="igjal-promise-reference" class="igjal-promise-reference"></p>
-      <div class="igjal-promise-bar">
-        
-        <div class="igjal-promise-actions">
-          <a id="igjal-promise-whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Compartilhar no WhatsApp</a>
-        </div>
+      <div class="igjal-promise-meta">
+        <span id="igjal-promise-reference" class="igjal-promise-reference"></span>
+        <a id="igjal-promise-whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar versículo no WhatsApp">Compartilhar no WhatsApp ↗</a>
       </div>
-      
     </section>
     <img class="logo" src="/logo-igreja.png" alt="Logo oficial da Igreja no Jardim Leal: globo terrestre e Bíblia aberta" width="256" height="256">
     <span class="eyebrow">IGJAL</span>
