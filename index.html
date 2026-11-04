@@ -100,6 +100,22 @@
       footer{margin-top:20px}
     }
     @media(max-width:350px){.link strong{font-size:14px}.link span{font-size:12px}}
+
+    .igjal-promises{margin:16px 0 22px;text-align:left;padding:22px 22px 18px;background:linear-gradient(135deg,#edf5ec,#fcfaf5);border:1px solid #d4e4d6;border-radius:18px}
+    .igjal-promises-eyebrow{font-size:11px;font-weight:900;color:#396b53;letter-spacing:.055em}
+    .igjal-promises-intro h3{font-size:21px;line-height:1.25;margin:7px 0 4px;color:#193e4e}
+    .igjal-promises-intro>p{font-size:13px;margin:0 0 13px;color:#53696a;line-height:1.5}
+    .igjal-promises blockquote{white-space:pre-wrap;overflow-wrap:anywhere;margin:11px 0 8px;padding:0 0 0 13px;border-left:3px solid #80aa90;font-size:clamp(17px,3.2vw,21px);line-height:1.7;color:#254d40;font-weight:550}
+    .igjal-promises .igjal-promise-reference{font-weight:800;color:#356d51;font-size:14px;margin:8px 0 18px}
+    .igjal-promise-bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center}
+    .igjal-promise-bar>small{font-size:12px;color:#627774;line-height:1.5}
+    .igjal-promise-actions{display:flex;flex-wrap:wrap;gap:8px}
+    .igjal-promise-actions button,.igjal-promise-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;border-radius:10px;padding:8px 11px;font-size:12px;line-height:1.4;font-weight:800;text-decoration:none;cursor:pointer;border:1px solid #8bae9a;color:#28553a;background:#fff}
+    .igjal-promise-actions a{background:#e1f1e5}
+    .igjal-promise-actions button:hover,.igjal-promise-actions a:hover{background:#d1e9d8}
+    .igjal-promises .igjal-promises-source{display:block;font-size:10px;line-height:1.5;color:#6e7b74;margin-top:17px}
+    .igjal-promises-source a{color:#416e56}
+    @media(max-width:500px){.igjal-promises{padding:17px 13px 14px}.igjal-promises-intro h3{font-size:18px}.igjal-promises blockquote{font-size:17px}.igjal-promise-actions button,.igjal-promise-actions a{min-height:43px;font-size:12px}}
   </style>
 </head>
 <body>
@@ -127,6 +143,23 @@
         </a>
       </div>
     </section>
+    <section class="igjal-promises" aria-labelledby="igjal-promises-title">
+      <div class="igjal-promises-intro">
+        <span class="igjal-promises-eyebrow">✦ CAIXINHA DE PROMESSAS · IGJAL</span>
+        <h3 id="igjal-promises-title">Uma palavra para o seu dia</h3>
+        <p>Versículos bíblicos para meditar, compartilhar e guardar no coração.</p>
+      </div>
+      <blockquote id="igjal-promise-text" aria-live="polite">Carregando a Palavra...</blockquote>
+      <p id="igjal-promise-reference" class="igjal-promise-reference"></p>
+      <div class="igjal-promise-bar">
+        <small id="igjal-promise-refresh">Nova passagem a cada 6 horas · horário de Brasília</small>
+        <div class="igjal-promise-actions">
+          <button id="igjal-promise-copy" type="button">Copiar versículo</button>
+          <a id="igjal-promise-whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Compartilhar no WhatsApp</a>
+        </div>
+      </div>
+      <small class="igjal-promises-source">Almeida Revista e Corrigida — edição histórica de 1911, com grafia original (domínio público). <a href="https://github.com/damarals/biblias/tree/main/data/canonical/ALM1911" target="_blank" rel="noopener noreferrer">Fonte dos textos</a>.</small>
+    </section>
     <nav class="links" aria-label="Acessos ao portal da igreja">
       <a class="link primary" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/"><strong>Entrar no site da igreja</strong><span>Portal completo da IGJAL</span></a>
       <a class="link" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/louvores.html"><strong>♫ Hinário Pedacinho do Céu</strong><span>Letras e cifras dos hinos</span></a>
@@ -147,5 +180,6 @@
   <script defer src="/portal-igreja-jardim-leal/config.js"></script>
   <script defer src="/portal-igreja-jardim-leal/assets/videos.js"></script>
   <script defer src="/portal-igreja-jardim-leal/assets/home-highlights.js?v=20261103-v1"></script>
+  <script defer src="/portal-igreja-jardim-leal/assets/caixinha-promessas.js?v=20261104-v1"></script>
 </body>
 </html>
