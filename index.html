@@ -136,10 +136,37 @@
     @keyframes igjal-promessas-flutuar{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
     @media(max-width:500px){.igjal-promises{padding:13px 2px 9px}.igjal-promises blockquote{font-size:clamp(19px,5.2vw,24px)}}
     @media(prefers-reduced-motion:reduce){.igjal-promises blockquote{animation:none}}
+
+    /* Caixinha pequena de boas-vindas acima do logo — somente compartilhar. */
+    main>.igjal-promises{margin:0 auto 14px;max-width:610px;padding:9px 12px 10px;background:#f4f8f2;border:1px solid #e3ece1;border-radius:13px;box-shadow:none;text-align:center}
+    main>.igjal-promises .igjal-promises-eyebrow{font-size:9px;letter-spacing:.055em;color:#54745e}
+    main>.igjal-promises .igjal-promises-intro h3{font-size:14px;line-height:1.2;margin:3px 0 2px;color:#294f43}
+    main>.igjal-promises .igjal-promises-intro>p{font-size:10px;line-height:1.3;margin:0 0 5px;color:#69776f}
+    main>.igjal-promises blockquote{font-size:clamp(12px,1.6vw,14px);font-weight:500;line-height:1.38;padding:0;margin:5px auto 3px;max-width:550px;text-shadow:none;animation:none;text-align:center;border:0}
+    main>.igjal-promises .igjal-promise-reference{font-size:11px;margin:3px auto 6px;line-height:1.2}
+    main>.igjal-promises .igjal-promise-bar,main>.igjal-promises .igjal-promise-actions{justify-content:center;gap:0}
+    main>.igjal-promises .igjal-promise-actions a{min-height:29px;padding:5px 12px;border:1px solid #b9d6c0;border-radius:999px;font-size:10px;font-weight:750;background:#e6f3e9;color:#2a6546}
+    @media(max-width:500px){main>.igjal-promises{padding:8px 9px;margin-bottom:12px}main>.igjal-promises blockquote{font-size:12px;line-height:1.36}main>.igjal-promises .igjal-promises-intro h3{font-size:13px}main>.igjal-promises .igjal-promises-intro>p{font-size:9px}}
   </style>
 </head>
 <body>
   <main>
+    <section class="igjal-promises" aria-labelledby="igjal-promises-title">
+      <div class="igjal-promises-intro">
+        <span class="igjal-promises-eyebrow">✦ CAIXINHA DE PROMESSAS · IGJAL</span>
+        <h3 id="igjal-promises-title">Uma palavra para o seu dia</h3>
+        <p>Versículos bíblicos para meditar, compartilhar e guardar no coração.</p>
+      </div>
+      <blockquote id="igjal-promise-text" aria-live="polite">Carregando a Palavra...</blockquote>
+      <p id="igjal-promise-reference" class="igjal-promise-reference"></p>
+      <div class="igjal-promise-bar">
+        
+        <div class="igjal-promise-actions">
+          <a id="igjal-promise-whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Compartilhar no WhatsApp</a>
+        </div>
+      </div>
+      
+    </section>
     <img class="logo" src="/logo-igreja.png" alt="Logo oficial da Igreja no Jardim Leal: globo terrestre e Bíblia aberta" width="256" height="256">
     <span class="eyebrow">IGJAL</span>
     <h1>Igreja no Jardim Leal</h1>
@@ -163,23 +190,7 @@
         </a>
       </div>
     </section>
-    <section class="igjal-promises" aria-labelledby="igjal-promises-title">
-      <div class="igjal-promises-intro">
-        <span class="igjal-promises-eyebrow">✦ CAIXINHA DE PROMESSAS · IGJAL</span>
-        <h3 id="igjal-promises-title">Uma palavra para o seu dia</h3>
-        <p>Versículos bíblicos para meditar, compartilhar e guardar no coração.</p>
-      </div>
-      <blockquote id="igjal-promise-text" aria-live="polite">Carregando a Palavra...</blockquote>
-      <p id="igjal-promise-reference" class="igjal-promise-reference"></p>
-      <div class="igjal-promise-bar">
-        
-        <div class="igjal-promise-actions">
-          <button id="igjal-promise-copy" type="button">Copiar versículo</button>
-          <a id="igjal-promise-whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Compartilhar no WhatsApp</a>
-        </div>
-      </div>
-      
-    </section>
+
     <nav class="links" aria-label="Acessos ao portal da igreja">
       <a class="link primary" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/"><strong>Entrar no site da igreja</strong><span>Portal completo da IGJAL</span></a>
       <a class="link" href="https://igrejanojardimleal.github.io/portal-igreja-jardim-leal/louvores.html"><strong>♫ Hinário Pedacinho do Céu</strong><span>Letras e cifras dos hinos</span></a>
